@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入网址生成二维码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwX-rz-D1n">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TYT-Iv-XbC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TYT-Iv-XbC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="TYT-Iv-XbC"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyo-uk-0k3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.89617637286944218" blue="0.12919428626821372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FAZ-Io-0Zu"/>
+                                </constraints>
+                                <state key="normal" title="生成二维码"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FAZ-Io-0Zu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="FAZ-Io-0Zu"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="createQRCodeBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCF-v7-crG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jPn-s9-C09">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Xzs-ia-Nec"/>
+                                    <constraint firstAttribute="width" constant="150" id="yTz-Mt-T47"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Xzs-ia-Nec"/>
+                                        <exclude reference="yTz-Mt-T47"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Xzs-ia-Nec"/>
+                                        <include reference="yTz-Mt-T47"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPB-wR-qLN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.91278287434304439" blue="0.19214559443453683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="扫描二维码"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="79" y="362" width="242" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="scanBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFv-Xh-7IB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tyo-uk-0k3" firstAttribute="top" secondItem="kwX-rz-D1n" secondAttribute="bottom" constant="8" id="7vL-Sa-106"/>
+                            <constraint firstItem="jPn-s9-C09" firstAttribute="centerX" secondItem="Tyo-uk-0k3" secondAttribute="centerX" id="CyQ-ln-aNq"/>
+                            <constraint firstItem="kwX-rz-D1n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="LLg-Ua-zzJ"/>
+                            <constraint firstItem="Tyo-uk-0k3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="Lkq-gV-wSz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tyo-uk-0k3" secondAttribute="trailing" constant="59" id="LxW-RZ-LMK"/>
+                            <constraint firstItem="kwX-rz-D1n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="NDF-Q6-EVi"/>
+                            <constraint firstItem="jPn-s9-C09" firstAttribute="top" secondItem="Tyo-uk-0k3" secondAttribute="bottom" constant="23" id="by2-bQ-OUJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kwX-rz-D1n" secondAttribute="trailing" constant="59" id="jOx-0w-W1Q"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="kwX-rz-D1n"/>
+                                <exclude reference="Tyo-uk-0k3"/>
+                                <exclude reference="jPn-s9-C09"/>
+                                <exclude reference="QPB-wR-qLN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="LLg-Ua-zzJ"/>
+                                <exclude reference="NDF-Q6-EVi"/>
+                                <exclude reference="jOx-0w-W1Q"/>
+                                <exclude reference="7vL-Sa-106"/>
+                                <exclude reference="Lkq-gV-wSz"/>
+                                <exclude reference="LxW-RZ-LMK"/>
+                                <exclude reference="CyQ-ln-aNq"/>
+                                <exclude reference="by2-bQ-OUJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="kwX-rz-D1n"/>
+                                <include reference="Tyo-uk-0k3"/>
+                                <include reference="jPn-s9-C09"/>
+                                <include reference="QPB-wR-qLN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="LLg-Ua-zzJ"/>
+                                <include reference="NDF-Q6-EVi"/>
+                                <include reference="jOx-0w-W1Q"/>
+                                <include reference="7vL-Sa-106"/>
+                                <include reference="Lkq-gV-wSz"/>
+                                <include reference="LxW-RZ-LMK"/>
+                                <include reference="CyQ-ln-aNq"/>
+                                <include reference="by2-bQ-OUJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="QRCodeImageView" destination="jPn-s9-C09" id="fR0-Sh-rgL"/>
+                        <outlet property="textField" destination="kwX-rz-D1n" id="0O0-eM-IGb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="418"/>
+        </scene>
+    </scenes>
+</document>
